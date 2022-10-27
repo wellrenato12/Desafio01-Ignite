@@ -25,6 +25,16 @@ export const TodoListsContainer = styled.main`
             color: ${props => props.theme.danger}
         }
 
+        p.completed {
+            text-decoration:line-through;
+            opacity: 0.6;
+            color: #22c55e;
+        }
+
+        &.completed {
+            border: 1px solid #22c55e;
+        }
+
         @media screen and (max-width: 800px) {
             padding: 1rem;
 

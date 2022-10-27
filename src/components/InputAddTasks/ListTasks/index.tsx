@@ -30,9 +30,9 @@ export function ListTasks({ newTask, onDeleteTask, checkCondition }: TasksProps)
 
   return (
       <TodoListsContainer>
-        <div>
+        <div className={isChecked ? 'completed' : ''}>
           <input onChange={handleAddFinishedTaskCounter} type="checkbox" defaultChecked={isChecked} />
-          <p>{newTask.taskDescription}</p>
+          <p className={isChecked ? 'completed' : ''}>{newTask.taskDescription}</p>
           <button onClick={handleDeleteTask}>
             <Trash size={20} />
           </button>
